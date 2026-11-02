@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-
+        <a href="#" id="ajuda">Precisa de ajuda?</a>
     </header>
     <main>
         <div id="tela">
-            <h1 id="titulotela">Que bom ter você aqui!</h1>
-            <p id="paratela">Entre ou Cadastra-se no site</p>
+            <h1 style="color: rgb(3, 90, 3); font-size: 28px;">Que bom ter você aqui!</h1>
+            <p id="paratela">Entre ou Cadastre-se no site</p>
             <div id="campos">
                 <p class="txtcampo">E-mail</p>
-                <section class="campo"><span class="txtin">Seu e-mail</span></section>
+                <input class="campo" type="email" placeholder="Seu e-mail">
                 <p class="txtcampo">Senha</p>
-                <section class="campo"><span class="txtin">Sua senha</span> </section> 
+                <input class="campo" type="password" placeholder="Sua senha">
                 <section id="recuperacao">
-                    <p class="txtcamporec">Me lembre</p> 
-                </section> 
-                <section id="btentrar"> <span><h6></h6></span></section>
-                 
+                    <label class="txtcamporec"><input type="checkbox"> Lembrar de mim</label>
+                    <a href="#" class="link">Esqueci minha senha</a>
+                </section>
+                <section id="btentrar"><span>Entrar</span></section>
             </div>
-            
+            <hr>
+            <p id="cadastro">Ainda não tem uma conta? <a href="#" class="link">Cadastre-se</a></p>
         </div>
-        <hr>
+        <p id="seguro">Seus dados estão seguros com a gente.</p>
     </main>
-
+    <footer>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de uso</a>
+    </footer>
 </body>
 </html>

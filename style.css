@@ -1,96 +1,169 @@
-body{
-    background-color: lightgray;
+ · CSS
+:root{
+    --verde: #059128;
+    --texto: #081c5c;
+    --cinza: #8a8f8c;
+    --borda: #e2e4e0;
+    --font-padrao: Verdana, Geneva, Tahoma, sans-serif;
 }
+ 
 *{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
 }
-/*-------------------CONFIG TELA DE LOGIN------------------------------*/
-#tela{
-    background-color: rgb(255, 255, 255);
-    width: 380px;
-    height: 500px;
-    margin: 87px;
-    border-radius: 10px;
+ 
+body{
+    background-color: #f8f7f3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-#titulotela{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    color: rgb(2, 80, 2);
-    margin-top: 0px;
-    padding-top: 60px ;
-    padding-left: 20px;
+ 
+/*-------------------TOPO (AJUDA)------------------------------*/
+header{
+    padding: 24px 40px;
+    text-align: right;
 }
-
-#paratela{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#ajuda{
     font-size: 11px;
-    color: rgb(139, 139, 139);
-    padding-left: 20px;
-    padding-top: 5px ;
-    
+    color: #6b706d;
+    text-decoration: none;
+}
+ 
+/*-------------------CONFIG TELA DE LOGIN------------------------------*/
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+ 
+#tela{
+    background-color: white;
+    width: 380px;
+    padding: 40px 28px 28px 28px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.08);
+}
+h1 {
+    font-size: 22px;
+    color: var(--verde);
 
 }
-
+#paratela{
+    font-size: 12px;
+    color: var(--cinza);
+    margin-top: 6px;
+}
+ 
+/*-------------------CAMPOS------------------------------*/
 #campos{
-    padding-left: 20px;
-    padding-top: 50px;
-    width: 100px;
-    height: 100px;
-    
+    margin-top: 30px;
 }
-
-.campo{
-    width: 338px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.445);
-    border: 1px;
-    border-color: rgb(184, 184, 184);
-    border-style: solid;
-    
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
-
+ 
 .txtcampo{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    font-size: 12px;
+    color: var(--texto);
+    margin-top: 16px;
+    margin-bottom: 6px;
 }
-.txtin{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    padding-top: 20px;
-    padding-left: 5px;
-    color: rgb(209, 209, 209);
+.txtcampo:first-child{
+    margin-top: 0;
+}
+ 
+.campo{
+    display: block;
+    width: 100%;
+    height: 42px;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 12px;
+    color: var(--texto);
+    outline: none;
+}
+.campo::placeholder{
+    color: #7f817f;
+}
+.campo:focus{
+    border-color: var(--verde);
+}
+ 
+#recuperacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
 }
 .txtcamporec{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    padding-top: 10px;
-    
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #555;
 }
-#recuperacao{
-
+.txtcamporec input{
+    accent-color: var(--verde);
 }
+ 
+.link{
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--verde);
+    text-decoration: none;
+}
+ 
 #btentrar{
-    width: 338px;
-    height: 40px;
-    background-color: rgba(2, 80, 2, 0.719);
-    padding-top: 1px;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    background-color: var(--verde);
+    border-radius: 8px;
     margin-top: 20px;
+    cursor: pointer;
 }
 #btentrar > span{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    padding-left: 60px;
-
-
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: bold;
+}
+ 
+/*-------------------PARTE DE BAIXO DO CARD------------------------------*/
+hr{
+    border: none;
+    border-top: 1px solid var(--borda);
+    margin: 24px 0 16px 0;
+}
+#cadastro{
+    text-align: center;
+    font-size: 11px;
+    color: var(--cinza);
+}
+ 
+#seguro{
+    font-size: 10px;
+    color: var(--cinza);
+}
+ 
+/*-------------------RODAPÉ------------------------------*/
+footer{
+    padding: 20px 40px;
+    text-align: right;
+}
+footer a{
+    font-size: 10px;
+    color: var(--cinza);
+    text-decoration: none;
+    margin-left: 16px;
 }
 
-
-
-
-
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
